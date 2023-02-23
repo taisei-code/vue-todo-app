@@ -6,6 +6,7 @@ const app = Vue.createApp({
   }),
 
   methods: {
+
     addItem: function(event) {
       // console.log('Clicked!')
       if(this.newItem === '') return
@@ -15,6 +16,11 @@ const app = Vue.createApp({
       }
       this.todos.push(todo)
       this.newItem = ''
+    },
+    deleteItem: function(index) {
+      // console.log('Delete!')
+      // console.log(index)
+      this.todos.splice(index, 1)
     }
   }
 
